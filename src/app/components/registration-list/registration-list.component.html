@@ -63,7 +63,7 @@
             <th mat-header-cell *matHeaderCellDef>Action</th>
             <td mat-cell *matCellDef="let element">
                 <!-- <button mat-button [routerLink]="['/userdetails', element.id]">view</button> -->
-                <button mat-button (click)="view(element.id)">visibility</button>
+                <button mat-button (click)="view(element.id)"><mat-icon>visibility</mat-icon></button>
                 <button mat-button (click)="edit(element.id)"><mat-icon>edit</mat-icon></button>
                 <button mat-button (click)="delete(element.id)"><mat-icon>delete</mat-icon></button>
                 
