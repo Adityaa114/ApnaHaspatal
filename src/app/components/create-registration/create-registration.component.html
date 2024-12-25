@@ -113,7 +113,7 @@
         
         <br><br>
             <div style="display: flex;justify-content:center">
-            <button mat-button *ngIf="!IsUpdate"
+            <button mat-button *ngIf="!IsUpdate"  [disabled]="!registrationForm.valid"
                     style="background-color: rgb(46, 192, 92);color:black" 
                     (click)="register()">
                 Submit
