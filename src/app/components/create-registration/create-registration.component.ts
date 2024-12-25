@@ -28,20 +28,20 @@ export class CreateRegistrationComponent {
   ngOnInit(){
     this.registrationForm = new FormGroup({
       id:new FormControl(),
-      firstName: new FormControl(''),
-      lastName: new FormControl(''),
-      email: new FormControl(''),
-      mobile: new FormControl(''),
-      weight: new FormControl(''),
-      height: new FormControl(''),
-      bmi: new FormControl(''),
+      firstName: new FormControl('',Validators.required),
+      lastName: new FormControl('',Validators.required),
+      email: new FormControl('',Validators.email),
+      mobile: new FormControl('',Validators.required),
+      weight: new FormControl('',Validators.required),
+      height: new FormControl('',Validators.required),
+      bmi: new FormControl('',Validators.required),
       bmiResult: new FormControl(''),
-      gender: new FormControl(''),
-      requireSpecialist: new FormControl(''),
-      bloodGrp: new FormControl(''),
+      gender: new FormControl('',Validators.required),
+      requireSpecialist: new FormControl('',Validators.required),
+      bloodGrp: new FormControl('',Validators.required),
       diseasesList: new FormControl(''),
-      regularPatient: new FormControl(''),
-      enquiryDate: new FormControl('')
+      regularPatient: new FormControl('',Validators.required),
+      enquiryDate: new FormControl('',Validators.required)
     });
 
     this.registrationForm.controls['height'].valueChanges.subscribe(res => {
